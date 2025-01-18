@@ -16,8 +16,8 @@ export default async function Image({
 }: {
   params: { messageId: string };
 }) {
-  let messageId = params.messageId;
-  let message = await client.message.findUnique({
+  const messageId = params.messageId;
+  const message = await client.message.findUnique({
     where: {
       id: messageId,
     },
@@ -31,7 +31,7 @@ export default async function Image({
   );
   const backgroundSrc = Uint8Array.from(backgroundData).buffer;
 
-  let title = message
+  const title = message
     ? message.chat.title
     : "An app generated on LlamaCoder.io";
 

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
 import "./globals.css";
 
-let title = "Llama Coder – AI Code Generator";
-let description = "Generate your next app with Llama 3.1 405B";
-let url = "https://llamacoder.io/";
-let ogimage = "https://llamacoder.io/og-image.png";
-let sitename = "llamacoder.io";
+const title = "Llama Coder – AI Code Generator";
+const description = "Generate your next app with Llama 3.1 405B";
+const url = "https://llamacoder.io/";
+const ogImage = "https://llamacoder.io/og-image.png";
+const siteName = "llamacoder.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -16,17 +16,17 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    images: [ogimage],
+    images: [ogImage],
     title,
     description,
-    url: url,
-    siteName: sitename,
+    url,
+    siteName,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    images: [ogimage],
+    images: [ogImage],
     title,
     description,
   },

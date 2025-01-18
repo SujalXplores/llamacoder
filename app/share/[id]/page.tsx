@@ -16,12 +16,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const generatedApp = await getGeneratedAppByID((await params).id);
 
-  let prompt = generatedApp?.prompt;
+  const prompt = generatedApp?.prompt;
   if (typeof prompt !== "string") {
     notFound();
   }
 
-  let searchParams = new URLSearchParams();
+  const searchParams = new URLSearchParams();
   searchParams.set("prompt", prompt);
 
   return {

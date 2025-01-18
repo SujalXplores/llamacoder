@@ -44,7 +44,7 @@ export default function Home() {
     if (prompt.length === 0) setPrompt("Build this");
     setQuality("low");
     setScreenshotLoading(true);
-    let file = event.target.files[0];
+    const file = event.target.files[0];
     const { url } = await uploadToS3(file);
     setScreenshotUrl(url);
     setScreenshotLoading(false);

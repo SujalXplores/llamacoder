@@ -10,14 +10,14 @@ export async function generateMetadata({
 }: {
   params: Promise<{ messageId: string }>;
 }): Promise<Metadata> {
-  let { messageId } = await params;
+  const { messageId } = await params;
   const message = await getMessage(messageId);
   if (!message) {
     notFound();
   }
 
-  let title = message.chat.title;
-  let searchParams = new URLSearchParams();
+  const title = message.chat.title;
+  const searchParams = new URLSearchParams();
   searchParams.set("prompt", title);
 
   return {
