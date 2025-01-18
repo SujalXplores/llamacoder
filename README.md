@@ -19,8 +19,15 @@
 ## Cloning & running
 
 1. Clone the repo: `git clone https://github.com/Nutlope/llamacoder`
-2. Create a `.env` file and add your [Together AI API key](https://togetherai.link/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup): `TOGETHER_API_KEY=`
-3. Run `npm install` and `npm run dev` to install dependencies and run locally
+2. Create a `.env` file and add the following:
+   - [Together AI API key](https://togetherai.link/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup): `TOGETHER_API_KEY=`
+   - PostgreSQL database URL: `DATABASE_URL=`
+3. Run the following commands:
+   ```bash
+   npm install
+   npx prisma migrate dev --name init
+   npm run dev
+   ```
 
 ## Contributing
 
